@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Makes the page fit phone screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScamShield</title>
+
+
+  <!-- Link to our CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 1. Logo and name -->
+    <header class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+        <path d="M16 2.5 5 6.5v8.2c0 7 4.6 12.2 11 14.8 6.4-2.6 11-7.8 11-14.8V6.5L16 2.5Z" fill="#0F5C5A"/>
+        <path d="m11 16.2 3.6 3.6L21.5 12" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>ScamShield</span>
+    </header>
+
+    <main>
+      <!-- 2. Main heading -->
+      <h1>Think Before You Invest.</h1>
+
+      <!-- 3. Short explanation -->
+      <p class="intro">Check suspicious investment messages, links and offers before taking action.</p>
+
+
+      <!-- Language selector (translations are not connected yet) -->
+      <div class="lang-row">
+        <label for="language">Language</label>
+        <select id="language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी (Hindi)</option>
+          <option value="mr">मराठी (Marathi)</option>
+          <option value="bn">বাংলা (Bengali)</option>
+          <option value="ta">தமிழ் (Tamil)</option>
+          <option value="te">తెలుగు (Telugu)</option>
+          <option value="kn">ಕನ್ನಡ (Kannada)</option>
+          <option value="ml">മലയാളം (Malayalam)</option>
+          <option value="gu">ગુજરાતી (Gujarati)</option>
+          <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+          <option value="or">ଓଡ଼ିଆ (Odia)</option>
+          <option value="as">অসমীয়া (Assamese)</option>
+        </select>
+        <p id="langStatus"></p>
+      </div>
+
+      <!-- The white card that holds the form -->
+      <div class="card">
+
+        <!-- 4. Large text box -->
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Paste a suspicious message here…"></textarea>
+
+        <!-- 8. Sample button -->
+        <button type="button" id="sampleBtn" class="link-button">Try a sample scam message</button>
+
+        <!-- 5. Optional link input -->
+        <label for="link">Link (optional)</label>
+        <input id="link" type="url" placeholder="Paste a suspicious link here…">
+
+        <!-- 6. Analyze button -->
+        <button type="button" id="analyzeBtn" class="main-button">Analyze for Risk</button>
+
+        <!-- Messages from the script appear here -->
+        <p id="status"></p>
+      </div>
+
+      <!-- Audio upload (UI only: speech-to-text is not connected yet) -->
+      <div class="card audio-card" id="audioCard">
+        <h2>Got a suspicious call recording?</h2>
+        <p class="audio-help">Choose a recording of the call. <span id="audioBadge" class="badge">Coming soon</span></p>
+        <label for="audioFile">Audio file</label>
+        <input id="audioFile" type="file" accept="audio/*">
+        <button type="button" id="audioBtn" class="main-button">Analyze recording</button>
+        <p id="audioStatus"></p>
+      </div>
+
+      <!-- 7. Safety note -->
+      <p class="note">ScamShield provides educational risk signals. It does not provide investment advice.</p>
+    </main>
+
+  </div>
+
+  <!-- Link to our JavaScript file (at the bottom so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>
